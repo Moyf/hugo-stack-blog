@@ -14,7 +14,7 @@ lastUpdated = "1994.01.02"
 
 [sidebar]
 emoji = ""
-subtitle = "Moy 的研究分享和碎碎念。"
+subtitle = "我曾是碎块，于此聚合。"
 
 [sidebar.avatar]
 enabled = true
@@ -71,7 +71,7 @@ default = "auto"
 enabled = true
 
 [imageProcessing.content]
-enabled = true
+enabled = false
 
 ## Comments
 [comments]
