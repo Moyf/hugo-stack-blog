@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>游戏 on Moy's Blog</title><link>https://moyf.github.io/hugo-stack-blog/categories/%E6%B8%B8%E6%88%8F/</link><description>Recent content in 游戏 on Moy's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 13 Jul 2023 11:53:00 +0000</lastBuildDate><atom:link href="https://moyf.github.io/hugo-stack-blog/categories/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>测测你的 Steam 账号价值吧！</title><link>https://moyf.github.io/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/</link><pubDate>Thu, 13 Jul 2023 11:53:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/</guid><description>&lt;img src="https://moyf.github.io/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713115838.png" alt="Featured image of post 测测你的 Steam 账号价值吧！" />&lt;h1 id="测测-steam-账号价值">测测 Steam 账号价值！&lt;/h1>
+&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>其实是和朋友聊天聊到这个。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">left: 朋友
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">right: Moy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt; 话说
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt; 你Steam库存里的游戏总价要多少
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt; 我觉得会是笔巨款
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; 谁、谁会去在意这种事情呢，哈哈……哈哈哈
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>虽然很心虚不过还是查了查自己的记账，从 2017 年起到现在大概是1W4：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713115412.png"
+width="591"
+height="1280"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>可以看到还是比较稳定的……除了第一年买的比较多，之后每年2k左右？&lt;br>
+&lt;del>大概也就是手游3单648嘛&lt;/del>&lt;br>
+最近几年因为 Steam 上大部分感兴趣的游戏都已经入库了，只买些新游戏为主，所以开销显著下降。&lt;/p>
+&lt;p>但不是谁都有&lt;del>我这样强迫症的&lt;/del>记账习惯，所以又顺便上网搜了一下，看到有两个网站可以查询自己 Steam 的账号价值。&lt;/p>
+&lt;h2 id="steam-官方消费记录查询">Steam 官方消费记录查询&lt;/h2>
+&lt;p>打开这个网站：&lt;br>
+&lt;a class="link" href="https://help.steampowered.com/zh-cn/accountdata/AccountSpend" target="_blank" rel="noopener"
+>帐户数据&lt;/a>&lt;br>
+（认准域名是 &lt;code>steampowered.com&lt;/code> 噢，谨防诈骗网站）&lt;/p>
+&lt;p>登录 Steam 账号的情况下就能查到自己历来的消费记录了：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713115838.png"
+width="999"
+height="654"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="366px"
+>&lt;/p>
+&lt;p>可以看到是 2708.97 美元，换算过来……将近2W人民币。&lt;br>
+比我自己记录的多了不少，可能是因为买游戏作为礼物送朋友的也算上了。&lt;/p>
+&lt;h2 id="账号游戏估值查询steam-计算器">账号游戏估值查询：Steam 计算器&lt;/h2>
+&lt;p>&lt;a class="link" href="https://steamdb.info/calculator/" target="_blank" rel="noopener"
+>Steam Calculator and SteamID Finder · SteamDB&lt;/a>&lt;/p>
+&lt;p>这个网站是大名鼎鼎的 SteamDB，同样提供了查询 Steam 账号价值的功能。&lt;br>
+但是它毕竟不是 Valve 官方，所以只能从你的游戏库来推测这些游戏价值几何。&lt;/p>
+&lt;p>登录之后输入自己的 Steam ID 就可以查询：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713120042.png"
+width="944"
+height="404"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="233"
+data-flex-basis="560px"
+>&lt;/p>
+&lt;p>Steam ID 可以通过点击自己的个人账户页面查看，比如：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713120251.png"
+width="1156"
+height="954"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="290px"
+>&lt;/p>
+&lt;p>把网址复制下来粘贴进去就可以。&lt;/p>
+&lt;p>下面的选框可以切换货币单位，人民币就换成 &lt;code>Chinese Yuan&lt;/code>：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713120339.png"
+width="832"
+height="307"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="271"
+data-flex-basis="650px"
+>&lt;/p>
+&lt;p>然后就可以点击 &lt;strong>Get Disappointed in your life（对你的人生感到失望吧）&lt;/strong> 按钮来进行查询了！&lt;/p>
+&lt;p>这个网站不仅会列出估值，还会综合游戏时间之类的因素，来得出各种数据……&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713120448.png"
+width="1296"
+height="1205"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="107"
+data-flex-basis="258px"
+>&lt;/p>
+&lt;p>像是：&lt;/p>
+&lt;ul>
+&lt;li>xx out of xxx games played（第一个进度条）：买了的游戏里玩过多少个&lt;/li>
+&lt;li>Average price：平均每个游戏价值多少&lt;/li>
+&lt;li>Average price per houer：平均每小时游戏时间花了多少钱&lt;/li>
+&lt;li>Hours on record：记录的总游戏时长&lt;/li>
+&lt;li>Average playtime：平均每款游戏玩了多久&lt;/li>
+&lt;li>Today&amp;rsquo;s prices：在今天购买所有产品需要花费的金额&lt;/li>
+&lt;/ul>
+&lt;p>因为最近在夏促所以显然我的账号&lt;em>贬值&lt;/em>了不少……哈哈……&lt;br>
+底下还有更多详细的数据，这里就不赘述了。&lt;/p>
+&lt;h3 id="游戏列表">游戏列表&lt;/h3>
+&lt;p>点击左侧的 &lt;code>Games&lt;/code> 按钮的话，能看到具体的游戏清单：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E6%B5%8B%E6%B5%8B%E4%BD%A0%E7%9A%84-steam-%E8%B4%A6%E5%8F%B7%E4%BB%B7%E5%80%BC%E5%90%A7/Assets/Pasted-image-20230713120926.png"
+width="1192"
+height="847"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="337px"
+>&lt;/p>
+&lt;p>合着我总共6000多个小时的游戏时间里有2580小时是在直播啊……哈……&lt;br>
+那我玩游戏的时间也太少了！&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">l: 脑内的评论小人
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">r: Moy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt; 你直播这么久一定舰长很多吧？
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; 啊……哈，哈哈……直播嘛，重要的是开心咯
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; （我自己都没想到我播了这么久的时长？！）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="一点感想">一点感想&lt;/h2>
+&lt;p>其实真要看的话……我 Steam 账号注册了9年多，实际在玩儿游戏算八年，平均下来在 Steam 上的游戏花销确实就是2k+/年。&lt;/p>
+&lt;p>学生党可能会觉得有点多，但阿墨是很多年的社畜啦。&lt;br>
+以「娱乐活动」来说……一年两千吗，嗯，真的是偏廉价的娱乐了。&lt;/p>
+&lt;p>出去旅游可能机票都要两千起，买点儿电子产品也是随随便便就几千没了。更别说一些比较烧钱的爱好比如摄影（？）和手游。&lt;br>
+可能相比之下……看电影会是差不多的「廉价娱乐」？算一张票60的话，2500可以看40部电影，平均每个月看3.3部……也很爽了嘿。&lt;/p>
+&lt;p>总之，能用相对低廉的价格体验到多次多彩的旅程和故事，我真是太爱电子游戏了。&lt;br>
+谢谢开发者们。&lt;/p>
+&lt;p>好，这就是今天的分享！希望对你有帮助！&lt;br>
+让我们一起对自己的人生感到失望吧！（bushi）&lt;/p></description></item><item><title>晕3D游戏的解药——晕车药</title><link>https://moyf.github.io/hugo-stack-blog/p/%E6%99%953d%E6%B8%B8%E6%88%8F%E7%9A%84%E8%A7%A3%E8%8D%AF%E6%99%95%E8%BD%A6%E8%8D%AF/</link><pubDate>Sun, 25 Jun 2023 11:10:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E6%99%953d%E6%B8%B8%E6%88%8F%E7%9A%84%E8%A7%A3%E8%8D%AF%E6%99%95%E8%BD%A6%E8%8D%AF/</guid><description>&lt;h1 id="晕3d游戏的解药晕车药">晕3D游戏的解药——晕车药&lt;/h1>
+&lt;p>如题。&lt;br>
+之前有听人说什么3DM的鸟姐边吃晕车药边玩3D游戏，当时就当个轶闻听听。&lt;/p>
+&lt;p>但是最近想玩儿《星际拓荒》，晕3D晕得厉害……半个小时就会受不了。&lt;br>
+于是买了晕车药试水。&lt;/p>
+&lt;p>结论：有效！&lt;/p>
+&lt;p>中途会有一种“大概能感知到大脑开始晕3D了但是被药物给压制住了”的奇妙感受。&lt;br>
+像是打了麻醉之后做手术那样，能有一些「触感」但没有「痛觉」。&lt;/p>
+&lt;p>（买的是日本那个啥白兔的；同时也买了国产的飞塞乐，下次再试试！&lt;/p>
+&lt;hr>
+&lt;p>飞塞乐也是有用的！&lt;/p>
+&lt;p>而且吃晕车药玩了几天游戏之后，再不吃药玩好像也没那么容易晕了~&lt;/p></description></item><item><title>暴饮暴食式打游戏！</title><link>https://moyf.github.io/hugo-stack-blog/p/%E6%9A%B4%E9%A5%AE%E6%9A%B4%E9%A3%9F%E5%BC%8F%E6%89%93%E6%B8%B8%E6%88%8F/</link><pubDate>Sun, 25 Jun 2023 11:01:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E6%9A%B4%E9%A5%AE%E6%9A%B4%E9%A3%9F%E5%BC%8F%E6%89%93%E6%B8%B8%E6%88%8F/</guid><description>&lt;h1 id="暴饮暴食式打游戏">暴饮暴食式打游戏&lt;/h1>
+&lt;p>昨天忙完了所有琐事然后开始《Outer Wilds》，一口气打了五六个小时……1点钟才睡。&lt;/p>
+&lt;blockquote>
+&lt;p>前篇：&lt;a class="link" href="https://moyf.github.io/hugo-stack-blog/p/%E6%99%953d%E6%B8%B8%E6%88%8F%E7%9A%84%E8%A7%A3%E8%8D%AF%E6%99%95%E8%BD%A6%E8%8D%AF/" >2023.06.25 晕3D游戏的解药——晕车药&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>爽吗？&lt;br>
+很爽！&lt;/p>
+&lt;p>不过嗓子有点哑了；然后一些日常惯例都没做。&lt;br>
+什么写日记啊今日回顾啊……&lt;br>
+第二天起来，一拍额头。&lt;/p>
+&lt;p>感觉就有点像吃大餐，上了一盘烤鸡，嚯！超好吃，嘎嘎开炫。&lt;br>
+然后从头到尾吃烤鸡，水也不喝别的菜也不碰。&lt;br>
+完事儿回过头来就会觉得，诶，差点滋味。&lt;/p>
+&lt;p>（但爽是真的爽xs）&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/_global/emotion/%e6%98%9f%e5%b9%b4Moy/%e4%b9%90%e5%95%a6.webp"
+loading="lazy"
+alt="|200"
+>&lt;/p></description></item></channel></rss>

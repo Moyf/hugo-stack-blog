@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TIL on Moy's Blog</title><link>https://moyf.github.io/hugo-stack-blog/tags/til/</link><description>Recent content in TIL on Moy's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 14 Jan 2024 00:17:00 +0000</lastBuildDate><atom:link href="https://moyf.github.io/hugo-stack-blog/tags/til/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 ShareX 做出带各种效果的截图</title><link>https://moyf.github.io/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/</link><pubDate>Sun, 14 Jan 2024 00:17:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/</guid><description>&lt;h1 id="使用-sharex-做出带各种效果的截图">使用 ShareX 做出带各种效果的截图&lt;/h1>
+&lt;p>&lt;style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}&lt;/style>
+&lt;div>&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">&lt;symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>&lt;/symbol>&lt;symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>&lt;/symbol>&lt;symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>&lt;/symbol>&lt;symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>&lt;/symbol>&lt;/svg>&lt;/div>&lt;div class="notice note" >
+&lt;p class="first notice-title">&lt;span class="icon-notice baseline">&lt;svg>&lt;use href="#note-notice">&lt;/use>&lt;/svg>&lt;/span>注释&lt;/p>&lt;p>&lt;a class="link" href="https://moyf.github.io/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/" target="_blank" rel="noopener"
+>2023.12.26 使用 Snipaste 截出圆角矩形带阴影的截图&lt;/a>&lt;/p>&lt;/div>
+&lt;br>
+根据下面 &lt;a class="link" href="%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2/TIL/2023.12.26%20%e4%bd%bf%e7%94%a8%20Snipaste%20%e6%88%aa%e5%87%ba%e5%9c%86%e8%a7%92%e7%9f%a9%e5%bd%a2%e5%b8%a6%e9%98%b4%e5%bd%b1%e7%9a%84%e6%88%aa%e5%9b%be.md#%5eb2t9zp" >Untag&lt;/a> 的页面，感觉带底色的截图也挺好看的！&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231227161158.png"
+width="2154"
+height="1792"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="120"
+data-flex-basis="288px"
+>&lt;br>
+尝试实现一下看看。&lt;/p>
+&lt;p>ShareX 有一个功能是截图后自动增加特效/水印：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-27_16-04-40.png"
+width="492"
+height="301"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="392px"
+>&lt;/p>
+&lt;p>在任务设置里可以进行配置：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-27_16-05-07.png"
+width="818"
+height="536"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="152"
+data-flex-basis="366px"
+>&lt;/p>
+&lt;p>对于&lt;strong>添加背景&lt;/strong>，可以用这几个步骤：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-27_16-05-24.png"
+width="1003"
+height="558"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="179"
+data-flex-basis="431px"
+>&lt;/p>
+&lt;ul>
+&lt;li>Rounded Corners：8&lt;/li>
+&lt;li>Shadow：
+&lt;ul>
+&lt;li>Opacity 0.6&lt;/li>
+&lt;li>Size 12&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Canvas：10 （用来向外拓展画布）&lt;/li>
+&lt;li>Background：填充底色&lt;/li>
+&lt;/ul>
+&lt;p>配置代码如下，可以用左下角按钮直接导入。&lt;em>（新版不支持剪贴板导入了）&lt;/em>&lt;br>
+&lt;div class="notice note" >
+&lt;p class="first notice-title">&lt;span class="icon-notice baseline">&lt;svg>&lt;use href="#note-notice">&lt;/use>&lt;/svg>&lt;/span>注释&lt;/p>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;添加背景&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Effects&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;$type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ShareX.ImageEffectsLib.RoundedCorners, ShareX.ImageEffectsLib&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;CornerRadius&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Enabled&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;$type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ShareX.ImageEffectsLib.Shadow, ShareX.ImageEffectsLib&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Opacity&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.6&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Size&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Darkness&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.0&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Black&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Offset&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;0, 0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Enabled&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;$type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ShareX.ImageEffectsLib.Canvas, ShareX.ImageEffectsLib&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Margin&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;10, 10, 10, 10&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Transparent&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Enabled&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;$type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;ShareX.ImageEffectsLib.DrawBackground, ShareX.ImageEffectsLib&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;252, 224, 76&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;UseGradient&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;GradientType&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Vertical&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color2&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;White&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;UseCustomGradient&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Gradient&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Vertical&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Colors&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;68, 120, 194&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">0.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;13, 58, 122&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">50.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;6, 36, 78&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">50.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Color&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;23, 89, 174&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Location&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mf">100.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;Enabled&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+&lt;br>
+利用这个后处理就可以方便地截取出这种样式的图片了！&lt;/p>
+&lt;h3 id="新版特效库">新版特效库&lt;/h3>
+&lt;p>&lt;em>现在 v15.0 直接变成 &lt;code>sxie&lt;/code> 文件了，不过不影响，内核还是那个 config.json&lt;/em>&lt;/p>
+&lt;p>保存方式变成了点击「打包器」然后存成 sxie 文件。&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231227163322.png"
+width="991"
+height="437"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="226"
+data-flex-basis="544px"
+>&lt;br>
+如果是绿色版，可以通过 &lt;strong>把 sxie 文件拖入这个窗口&lt;/strong> 来安装其他的特效。&lt;/p>
+&lt;p>官方推出了图像效果预设库：&lt;a class="link" href="https://getsharex.com/image-effects" target="_blank" rel="noopener"
+>Image effects - ShareX&lt;/a>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-27_16-29-08.png"
+width="1172"
+height="426"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="275"
+data-flex-basis="660px"
+>&lt;/p>
+&lt;h3 id="搞笑特效">搞笑特效&lt;/h3>
+&lt;p>有一个特效是在截图上加一根假的头发：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231227164214.png"
+width="545"
+height="393"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="138"
+data-flex-basis="332px"
+>&lt;/p>
+&lt;p>好好笑，草。别说，做的还挺像真的！&lt;/p>
+&lt;h3 id="多区域模式">多区域模式&lt;/h3>
+&lt;p>Tips：在截图选项里开启 &lt;strong>多区域模式&lt;/strong> 之后：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231227230912.png"
+width="707"
+height="592"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="119"
+data-flex-basis="286px"
+>&lt;br>
+就不会一键直接截图，而是可以反复调整具体尺寸了（和 Snipaste 保持一致）；&lt;br>
+而且可以把截取的多个图像直接拼贴在一起。&lt;/p>
+&lt;p>可惜不能对每张都加圆角矩形，嗐。&lt;/p>
+&lt;h2 id="图片体积">图片体积&lt;/h2>
+&lt;h4 id="压缩成其他格式">压缩成其他格式&lt;/h4>
+&lt;p>有两个外部方案：&lt;br>
+&lt;a class="link" href="https://krau.top/posts/use-sharex-and-mdimage-for-efficiency" target="_blank" rel="noopener"
+>使用ShareX和Markdown Image自动压缩截图为WebP格式并一键插入Markdown文档 - 柯罗krau的博客 | krau&amp;rsquo;s blog&lt;/a> 这个添加了一个 ShareX 动作去快速转换 webp 格式并复制。&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/msedge_186_182612.jpg"
+width="1092"
+height="1089"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.uzz5.com/post/j9hs.html" target="_blank" rel="noopener"
+>Sharex 截图压缩并转换成 webp格式 | 悠哉哉&lt;/a> 这个依赖了 ImageMagick 去二次压缩。&lt;/p>
+&lt;h4 id="png-和-jpg-的对比">png 和 jpg 的对比&lt;/h4>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/explorer_184_181707.jpg"
+width="291"
+height="201"
+loading="lazy"
+alt="同样的图片大小（592x645）"
+class="gallery-image"
+data-flex-grow="144"
+data-flex-basis="347px"
+>&lt;/p>
+&lt;p>png 格式：526 KB&lt;br>
+jpg 格式：80 KB&lt;br>
+体积相差了 6.5 倍……唔，还是用 jpg + 纯色背景吧！&lt;/p>
+&lt;p>&lt;em>顺便，用 Snipaste 截图了同样大小的图片，575 KB，差不多呢……&lt;/em>&lt;/p>
+&lt;p>可以在这里设置截图的格式：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Obsidian_185_181839.jpg"
+width="842"
+height="599"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="337px"
+>&lt;/p>
+&lt;h3 id="webp-呢">Webp 呢？&lt;/h3>
+&lt;p>支持吗——&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/thumbnail_large.webp"
+width="550"
+height="550"
+loading="lazy"
+alt="300"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+>&lt;/p>
+&lt;p>噢，是支持的！&lt;br>
+那其实尝试用 Webp 也说不定可以。&lt;/p>
+&lt;p>从这张 Logo 来看，体积大概是 png 的 1/3。&lt;br>
+（那其实还是 jpg 更小噢）&lt;/p>
+&lt;h2 id="文件命名">文件命名&lt;/h2>
+&lt;p>在这里设置：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/ShareX_188_182838.jpg"
+width="842"
+height="599"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="337px"
+>&lt;/p>
+&lt;p>在使用 ShareX &lt;strong>作为文件粘贴&lt;/strong> 的时候，会保留文件名，这个时候命名是有效的。&lt;/p>
+&lt;p>否则，会按照图片来自动重命名。&lt;/p>
+&lt;p>如果想设置重命名格式的话，可以参考 &lt;span title="某个私人页面">████&lt;/span> 部分。&lt;/p></description></item><item><title>使用 Snipaste 截出圆角矩形带阴影的截图</title><link>https://moyf.github.io/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/</link><pubDate>Tue, 02 Jan 2024 19:57:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/</guid><description>&lt;h1 id="使用-snipaste-截出圆角矩形带阴影的截图">使用 Snipaste 截出圆角矩形带阴影的截图&lt;/h1>
+&lt;h2 id="跑题但有效使用-sharex-做出带圆角阴影和底色的截图">跑题但有效：使用 ShareX 做出带圆角阴影和底色的截图&lt;/h2>
+&lt;p>详见：&lt;a class="link" href="https://moyf.github.io/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-sharex-%E5%81%9A%E5%87%BA%E5%B8%A6%E5%90%84%E7%A7%8D%E6%95%88%E6%9E%9C%E7%9A%84%E6%88%AA%E5%9B%BE/" >231228_使用 ShareX 做出带各种效果的截图&lt;/a>&lt;/p>
+&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>是在之前一个帖子里看到的效果。&lt;br>
+&lt;a class="link" href="Zettelkasten/2023-12/231226_Dynamic%20Highlights%20%e6%97%b6%e9%97%b4%e5%92%8c%e7%94%a8%e6%97%b6%e6%95%b0%e5%ad%97%e5%8f%98%e8%89%b2.md#%5ec3u213" >231226_Dynamic Highlights 时间和用时数字变色&lt;/a>&lt;/p>
+&lt;p>一开始的研究：&lt;/p>
+&lt;blockquote>
+&lt;p>从 &lt;a class="link" href="https://github.com/Snipaste/feedback/issues/1510" target="_blank" rel="noopener"
+>请求自动添加阴影和窗口圆角 · Issue #1510 · Snipaste/feedback&lt;/a> 来看，还不支持。有个叫 &lt;strong>iShot&lt;/strong> 的看起来能支持。&lt;br>
+等下，是支持的！&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231226175216.png"
+width="534"
+height="167"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="319"
+data-flex-basis="767px"
+>&lt;br>
+截图窗口左上角能加一个选项。&lt;/p>
+&lt;p>然后 &lt;strong>WinSnap&lt;/strong> 支持阴影但是不支持圆角矩形。&lt;/p>
+&lt;/blockquote>
+&lt;p>顺便，看到这个页面：&lt;br>
+&lt;a class="link" href="https://utgd.net/article/20238" target="_blank" rel="noopener"
+>用 Shortcuts 给窗口截图加边框 - #UNTAG&lt;/a>&lt;br>
+很漂亮的个人博客！ ^b2t9zp&lt;br>
+（其实不是博客，应该算是一种少数派 Alter 的工具资讯站）&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_20-07-10.png"
+width="1433"
+height="1272"
+loading="lazy"
+alt="404"
+class="gallery-image"
+data-flex-grow="112"
+data-flex-basis="270px"
+>&lt;/p>
+&lt;p>重要的是这个页面不仅好看而且实用！&lt;br>
+提到了 Shortcuts 快捷指令的使用，以及「填充边框」这样来避免版透明色带来的体积问题。&lt;/p>
+&lt;h3 id="snipaste-里如何实现呢">Snipaste 里如何实现呢？&lt;/h3>
+&lt;p>在截图的这里，点击，更改成圆角（快捷键 &lt;code>U&lt;/code> ）：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_17-59-56.png"
+width="696"
+height="428"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="390px"
+>&lt;/p>
+&lt;p>然后工具栏这里，勾选阴影：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_18-00-41.png"
+width="696"
+height="428"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="390px"
+>&lt;/p>
+&lt;h3 id="注意还有一点">注意：还有一点！&lt;/h3>
+&lt;p>设置里最好勾选这个「复制图像为文件」：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_18-01-46.png"
+width="511"
+height="256"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="199"
+data-flex-basis="479px"
+>&lt;/p>
+&lt;p>不然直接作为图片格式可能会变成下面这个丑模样：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231226180036.png"
+width="696"
+height="428"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="390px"
+>&lt;/p>
+&lt;p>&lt;em>大概是因为透明通道的问题&lt;/em>&lt;/p>
+&lt;h4 id="副作用粘贴进-obsidian-的文件命名">副作用：粘贴进 Obsidian 的文件命名&lt;/h4>
+&lt;p>由于是文件，所以粘贴进 Ob 的时候命名会是文件名：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231226195001.png"
+width="503"
+height="407"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="123"
+data-flex-basis="296px"
+>&lt;/p>
+&lt;p>——也就是说，这时候 Snipaste 的命名配置就会有用了！&lt;/p>
+&lt;h3 id="自动化一点呢">自动化一点呢？&lt;/h3>
+&lt;p>现在可以用 &lt;code>U&lt;/code> 快速切换圆角，但是阴影选项还要手动切换，有点麻烦。&lt;br>
+包括&lt;strong>复制为文件&lt;/strong>也要用 &lt;code>Ctrl+Alt+C&lt;/code> 来完成。&lt;/p>
+&lt;p>能更方便吗？&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.snipaste.com/zh-cn/command-line-options" target="_blank" rel="noopener"
+>命令行选项 - Snipaste&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>结合 &lt;strong>&lt;code>--shadow&lt;/code>&lt;/strong> 获取带阴影截图；结合 &lt;strong>&lt;code>--no-shadow&lt;/code>&lt;/strong> 获取不带阴影截图。&lt;/p>
+&lt;/blockquote>
+&lt;p>这样的话，可以用命令行截图来&lt;strong>强制带阴影&lt;/strong>，第二部也搞定。&lt;/p>
+&lt;p>如： &lt;code>snip -o file-dialog;clipboard&lt;/code> 会在截屏选区确定后自动复制截图，并弹出文件保存对话框。&lt;/p>
+&lt;p>那我们可以：&lt;br>
+&lt;code>snip --shadow -o clipboard&lt;/code>&lt;/p>
+&lt;p>然后在这里进行自定义：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_18-13-01.png"
+width="1140"
+height="569"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>&lt;/p>
+&lt;p>效果：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Pasted-image-20231226181329.png"
+width="370"
+height="260"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="341px"
+>&lt;/p>
+&lt;p>Nahh 不行，阴影会加上，但不是作为文件保存的。&lt;br>
+是不是可以用 &lt;code>-o exec&lt;/code> 来保存文件并复制？&lt;br>
+或者就干脆把 &lt;a class="link" href="#%e6%b3%a8%e6%84%8f%ef%bc%9a%e8%bf%98%e6%9c%89%e4%b8%80%e7%82%b9%ef%bc%81" >注意：还有一点！&lt;/a> 里的设置变成默认开好叻。&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_18-15-42.png"
+width="587"
+height="401"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="351px"
+>&lt;/p>
+&lt;p>OK，这样可以咯。&lt;/p>
+&lt;p>分配了一个快捷键：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E4%BD%BF%E7%94%A8-snipaste-%E6%88%AA%E5%87%BA%E5%9C%86%E8%A7%92%E7%9F%A9%E5%BD%A2%E5%B8%A6%E9%98%B4%E5%BD%B1%E7%9A%84%E6%88%AA%E5%9B%BE/Assets/Snipaste_2023-12-26_18-16-03.png"
+width="511"
+height="537"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="95"
+data-flex-basis="228px"
+>&lt;/p>
+&lt;p>这样常态是普通的截图（直角矩形无阴影），用这个特殊的「带截图阴影」则是截取美观截图（圆角矩形带阴影）。&lt;/p>
+&lt;p>Finish！&lt;/p>
+&lt;p>🤔 可惜直角矩形和圆角矩形的切换好像还不能在命令行和里……&lt;br>
+这个倒是因为有快捷键可以配合 QK 自动化；或者也可以提 FR 试试。&lt;/p>
+&lt;p>主要是频率可能不高，就先这样吧，到此为止！&lt;/p>
+&lt;p>（总之还是提了个 Issue： &lt;a class="link" href="https://github.com/Snipaste/feedback/issues/2810" target="_blank" rel="noopener"
+>[FR] 命令行添加参数：指定圆角矩形截图、作为文件输出 · Issue #2810 · Snipaste/feedback&lt;/a> ）&lt;/p>
+&lt;p>#EOF&lt;/p></description></item><item><title>Blender 模型怎么导入 Unreal</title><link>https://moyf.github.io/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/</link><pubDate>Fri, 22 Dec 2023 17:59:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/</guid><description>&lt;p>（从 SketchFab 下载下来的也可以参考这个，大概）&lt;/p>
+&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627172104.png"
+width="308"
+height="243"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="304px"
+>&lt;br>
+导入进去之后材质会丢掉，怎么会是呢？&lt;/p>
+&lt;p>参考这个教程：&lt;br>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/N8y_eH7QB2o"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://www.youtube.com/watch?v=N8y_eH7QB2o" target="_blank" rel="noopener"
+>油管地址&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>先选 Export 然后选择 &lt;code>.fbx&lt;/code> 格式；&lt;/p>
+&lt;h2 id="blender-里的纹理">Blender 里的纹理&lt;/h2>
+&lt;p>SketchFab 下载过来的模型是分开的，导入 Blender 会显示白模。&lt;br>
+怎么把纹理贴图重新加回去呢？&lt;/p>
+&lt;p>要用到插件 &lt;code>Node Wrangler&lt;/code> ；&lt;/p>
+&lt;p>首先导入模型，然后打开 Shading 界面：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230710181041.png"
+width="320"
+height="52"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="615"
+data-flex-basis="1476px"
+>&lt;/p>
+&lt;p>选中物体，右边的属性界面切到材质：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230710181119.png"
+width="454"
+height="528"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="85"
+data-flex-basis="206px"
+>&lt;/p>
+&lt;p>如果没有的话就先按加号新建一个；&lt;/p>
+&lt;p>然后在着色器窗口能看到两个节点，&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230710181309.png"
+width="642"
+height="650"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="98"
+data-flex-basis="237px"
+>&lt;/p>
+&lt;p>选中 Principled BSDF，然后按快捷键 &lt;code>Ctrl+Shfit+T&lt;/code>；&lt;br>
+在打开的窗口中全选材质图片：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230710181332.png"
+width="331"
+height="137"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="241"
+data-flex-basis="579px"
+>&lt;/p>
+&lt;p>插件就会自动创建好各个节点：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230710181400.png"
+width="1548"
+height="1203"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="308px"
+>&lt;/p>
+&lt;h2 id="打包纹理">打包纹理&lt;/h2>
+&lt;p>导出-&amp;gt;fbx 格式：&lt;/p>
+&lt;p>&lt;code>Path Mode&lt;/code> 选成 &lt;strong>Copy&lt;/strong>：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627170606.png"
+width="322"
+height="175"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="441px"
+>&lt;br>
+然后勾选边上的 &lt;code>Embed Textures&lt;/code> 按钮：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627170707.png"
+width="365"
+height="151"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="241"
+data-flex-basis="580px"
+>&lt;/p>
+&lt;p>这样才能把纹理一起打包进去。&lt;/p>
+&lt;h2 id="限定范围">限定范围&lt;/h2>
+&lt;p>东西多的话可以只勾选 &lt;code>Selected Objects&lt;/code>，然后下面也可以只选 &lt;code>Mesh&lt;/code>：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627170827.png"
+width="238"
+height="259"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="91"
+data-flex-basis="220px"
+>&lt;/p>
+&lt;p>这样可以避免把相机和灯光啥的一起导出。&lt;/p>
+&lt;blockquote>
+&lt;p>——底下这个 Mesh 可能得小心，好像会导致啥都没导出来。&lt;/p>
+&lt;/blockquote>
+&lt;p>导出之后可以预览&lt;/p>
+&lt;h2 id="轴向">轴向&lt;/h2>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20231222173650.png"
+width="730"
+height="259"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="281"
+data-flex-basis="676px"
+>&lt;br>
+&lt;a class="link" href="https://www.reddit.com/r/unrealengine/comments/kw2v88/newbie_blender_to_ue4_settings_and_how_to_get/" target="_blank" rel="noopener"
+>newbie: Blender to UE4 settings and how to get objects oriented on the right axis : unrealengine&lt;/a>&lt;/p>
+&lt;p>详见下方 &lt;a class="link" href="#%e5%9d%90%e6%a0%87%e8%bd%b4%e6%ad%aa%e4%ba%86%ef%bc%9f" >坐标轴歪了？&lt;/a> 章节。&lt;/p>
+&lt;h2 id="平滑">平滑？&lt;/h2>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627171011.png"
+width="230"
+height="153"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
+>&lt;br>
+视频里说这里也可以把 &lt;code>Smoothing&lt;/code> 改成 &lt;code>Face&lt;/code>，但我不太明白，先不动。&lt;/p>
+&lt;h2 id="保存导出预设">保存导出预设&lt;/h2>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627171434.png"
+width="237"
+height="97"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="244"
+data-flex-basis="586px"
+>&lt;br>
+完事儿可以存成一个 Preset 方便复用。&lt;/p>
+&lt;h2 id="坐标轴歪了">坐标轴歪了？&lt;/h2>
+&lt;p>&lt;a class="link" href="https://blog.csdn.net/jxyyl/article/details/120328702" target="_blank" rel="noopener"
+>Blender模型导出到ue4_blender骨骼导入ue方向问题_三尺三的博客-CSDN博客&lt;/a>&lt;/p>
+&lt;p>blender：&lt;br>
+将模型面朝X轴放置，清除旋转与缩放。&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627171639.png"
+width="782"
+height="532"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="352px"
+>&lt;/p>
+&lt;p>&lt;mark>⭐️重要：单位改成 0.01：&lt;/mark>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627171818.png"
+width="440"
+height="265"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="398px"
+>&lt;br>
+可能因为 UE 里是 0.01 米等于一个单位？&lt;/p>
+&lt;p>导出的时候：&lt;/p>
+&lt;ul>
+&lt;li>Forward 选择 &lt;code>-Y Forward&lt;/code>&lt;/li>
+&lt;li>Up 选择 &lt;code>Z Up&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}&lt;/style>
+&lt;div>&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">&lt;symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>&lt;/symbol>&lt;symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>&lt;/symbol>&lt;symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>&lt;/symbol>&lt;symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>&lt;/symbol>&lt;/svg>&lt;/div>&lt;div class="notice note" >
+&lt;p class="first notice-title">&lt;span class="icon-notice baseline">&lt;svg>&lt;use href="#note-notice">&lt;/use>&lt;/svg>&lt;/span>注释&lt;/p>&lt;p>原理（个人理解）：&lt;br>
+1 blender中将模型朝向要导入软件的正方向&lt;br>
+2 blender中导出时，将正方向设置为blender的正方向（-Y）&lt;br>
+以上两点可以在软件的背视图中查看。&lt;/p>&lt;/div>
+&lt;br>
+按他说的…… &lt;code>-Y&lt;/code>是 Blender 的朝前，然后 UE 里则是 &lt;code>X&lt;/code> 朝前？&lt;br>
+试试看！&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627172026.png"
+width="872"
+height="664"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="131"
+data-flex-basis="315px"
+>&lt;br>
+Blender 里的样子；&lt;/p>
+&lt;p>导入之后：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627172527.png"
+width="416"
+height="821"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="50"
+data-flex-basis="121px"
+>&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627172616.png"
+width="461"
+height="434"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="106"
+data-flex-basis="254px"
+>&lt;br>
+……歪来。&lt;br>
+且不说纹理还是丢失的；是不是因为那个 &lt;code>Rotation X=90&lt;/code> 啊？&lt;/p>
+&lt;h1 id="问题排查">问题排查&lt;/h1>
+&lt;h2 id="纹理的问题">纹理的问题&lt;/h2>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627172829.png"
+width="789"
+height="270"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="292"
+data-flex-basis="701px"
+>&lt;br>
+抓了另一个 fbx 导入，纹理都是正常的；&lt;br>
+包括 Windows 的 3D 查看器也能正常显示。&lt;/p>
+&lt;p>所以还是 Blender 里没能导出成功……&lt;/p>
+&lt;h2 id="还是看看远方的-node-wrangler-吧">还是看看远方的 Node Wrangler 吧&lt;/h2>
+&lt;p>记住快捷键：&lt;code>Ctrl+Shift+T&lt;/code>&lt;/p>
+&lt;p>启用 Node Wrangler Add-on 的情况下，打开 Shader 编辑器，选中 &lt;code>Principled BSDF&lt;/code> 后按下快捷键：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627174630.png"
+width="653"
+height="866"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="75"
+data-flex-basis="180px"
+>&lt;/p>
+&lt;div class="notice note" >
+&lt;p class="first notice-title">&lt;span class="icon-notice baseline">&lt;svg>&lt;use href="#note-notice">&lt;/use>&lt;/svg>&lt;/span>注释&lt;/p>&lt;p>「原理化（基于物理的）散射分布函数」&lt;br>
+BSDF = Bidirectional Scattering Distribution Function，双向散射分布函数&lt;/p>&lt;/div>
+&lt;p>然后选中所有的贴图，就会自动创建好节点。&lt;/p>
+&lt;p>这样导出的模型是带贴图的，试过了。&lt;/p>
+&lt;p>……Fuck.&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/blender-%E6%A8%A1%E5%9E%8B%E6%80%8E%E4%B9%88%E5%AF%BC%E5%85%A5-unreal/Assets/Pasted-image-20230627175040.png"
+width="1137"
+height="820"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="138"
+data-flex-basis="332px"
+>&lt;/p></description></item><item><title>Rider 的两则小知识</title><link>https://moyf.github.io/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/</link><pubDate>Wed, 20 Dec 2023 18:28:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 id="rider-的两则小知识">Rider 的两则小知识&lt;/h1>
+&lt;h2 id="symbol-search-符号查询">Symbol Search 符号查询&lt;/h2>
+&lt;p>使用默认的搜索框，哪怕设置了 Filter，&lt;br>
+还是会给出一大堆的无关选项。&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/20231218_161622_233_copy.png"
+width="898"
+height="196"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="458"
+data-flex-basis="1099px"
+>&lt;/p>
+&lt;p>这个时候就应该用 &lt;code>Alt+\&lt;/code> 来查找函数啥的：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218161730.png"
+width="695"
+height="111"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="626"
+data-flex-basis="1502px"
+>&lt;/p>
+&lt;p>这个是限定范围的，&lt;br>
+好用很多！&lt;/p>
+&lt;h2 id="fast-surround-快速包裹">Fast Surround 快速包裹&lt;/h2>
+&lt;p>有时候会经常需要把比如 &lt;code>UAkSwitchValue&lt;/code> 转成 &lt;code>TStrongObjectPtr&amp;lt;UAkSwitchValue&amp;gt;&lt;/code>&lt;/p>
+&lt;p>这时候可以用 &lt;a class="link" href="https://www.jetbrains.com/help/rider/Templates__Applying_Templates__Creating_Source_Code_Using_Live_Templates.html" target="_blank" rel="noopener"
+>Live Template&lt;/a> 功能：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218161946.png"
+width="984"
+height="701"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="336px"
+>&lt;/p>
+&lt;p>&lt;code>$SELECTION$&lt;/code> 代表选中的文本，&lt;br>
+&lt;code>$END$&lt;/code> 代表插入之后的结尾放哪儿。&lt;/p>
+&lt;p>注意右边有个 &lt;code>Mnemonic&lt;/code> 速记符，是在这个时候用的：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218201007.png"
+width="302"
+height="199"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="364px"
+>&lt;br>
+唤出的方法：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218201038.png"
+width="898"
+height="247"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="363"
+data-flex-basis="872px"
+>&lt;br>
+可以用快捷键 &lt;code>Ctrl+E, U&lt;/code> 来快速唤出。&lt;/p>
+&lt;hr>
+&lt;p>在右键的 Contextural Menu 可以显示，但这样太麻烦了。&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218162128.png"
+width="537"
+height="290"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+>&lt;/p></description></item><item><title>B站新版封面规格说明</title><link>https://moyf.github.io/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/</link><pubDate>Tue, 19 Dec 2023 09:34:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/</guid><description>&lt;h1 id="b站新版封面规格说明">B站新版封面规格说明&lt;/h1>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/Assets/e8670bcd90149e453bb038ae1f8c16fb.png"
+width="1053"
+height="2121"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="49"
+data-flex-basis="119px"
+>&lt;/p>
+&lt;p>出处：&lt;br>
+《冀丶黎的动态-哔哩哔哩》&lt;br>
+&lt;a class="link" href="https://t.bilibili.com/869395869995106404" target="_blank" rel="noopener"
+>https://t.bilibili.com/869395869995106404&lt;/a>&lt;/p>
+&lt;h2 id="封面参考">封面参考&lt;/h2>
+&lt;p>《38位UP主，谁是起标题/封面之王？》&lt;br>
+&lt;a class="link" href="https://www.bilibili.com/video/BV18G4y1s7A9" target="_blank" rel="noopener"
+>https://www.bilibili.com/video/BV18G4y1s7A9&lt;/a>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/Assets/B%E7%AB%99%E5%B0%81%E9%9D%A2-LKS.png"
+width="1920"
+height="1200"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p>
+&lt;p>参考：055&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/Assets/Pasted-image-20231215124938.png"
+width="2447"
+height="1285"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="457px"
+>&lt;/p>
+&lt;p>参考：Tim&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/Assets/Pasted-image-20231215125342.png"
+width="2447"
+height="1285"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="457px"
+>&lt;/p></description></item><item><title>影视飓风的字幕样式和插件</title><link>https://moyf.github.io/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/</link><pubDate>Fri, 15 Dec 2023 12:57:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/</guid><description>&lt;h1 id="影视飓风的字幕样式和插件">影视飓风的字幕样式和插件&lt;/h1>
+&lt;p>关联：&lt;a class="link" href="https://moyf.github.io/hugo-stack-blog/p/b%E7%AB%99%E6%96%B0%E7%89%88%E5%B0%81%E9%9D%A2%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E/" >231215_B站新版封面规格说明&lt;/a>&lt;/p>
+&lt;h2 id="影视飓风的字幕样式">影视飓风的字幕样式&lt;/h2>
+&lt;p>《UP主们都怎么做字幕？调研100位UP，他们的秘密是&amp;hellip;》&lt;br>
+&lt;a class="link" href="https://www.bilibili.com/video/BV1GY4y1U7oq" target="_blank" rel="noopener"
+>https://www.bilibili.com/video/BV1GY4y1U7oq&lt;/a>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/Assets/Pasted-image-20231215100643.png"
+width="1920"
+height="1200"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p>
+&lt;h3 id="字幕字体">字幕字体&lt;/h3>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/Assets/Pasted-image-20231215101020.png"
+width="2447"
+height="1219"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="481px"
+>&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/Assets/Pasted-image-20231215101004.png"
+width="2447"
+height="1219"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="481px"
+>&lt;/p>
+&lt;h3 id="字幕样式">字幕样式&lt;/h3>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/Assets/Pasted-image-20231215101330.png"
+width="2447"
+height="1219"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="481px"
+>&lt;/p>
+&lt;h2 id="影视飓风的视频插件">影视飓风的视频插件&lt;/h2>
+&lt;p>《月更10期？！影视飓风用什么做视频？》&lt;br>
+&lt;a class="link" href="https://www.bilibili.com/video/BV1mv411e7DE" target="_blank" rel="noopener"
+>https://www.bilibili.com/video/BV1mv411e7DE&lt;/a>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%BD%B1%E8%A7%86%E9%A3%93%E9%A3%8E%E7%9A%84%E5%AD%97%E5%B9%95%E6%A0%B7%E5%BC%8F%E5%92%8C%E6%8F%92%E4%BB%B6/Assets/Pasted-image-20231215100437.png"
+width="1146"
+height="716"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="160"
+data-flex-basis="384px"
+>&lt;/p></description></item><item><title>网易云的音乐封面歌词获取（更新）</title><link>https://moyf.github.io/hugo-stack-blog/p/%E7%BD%91%E6%98%93%E4%BA%91%E7%9A%84%E9%9F%B3%E4%B9%90%E5%B0%81%E9%9D%A2%E6%AD%8C%E8%AF%8D%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%96%B0/</link><pubDate>Tue, 17 Oct 2023 16:18:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E7%BD%91%E6%98%93%E4%BA%91%E7%9A%84%E9%9F%B3%E4%B9%90%E5%B0%81%E9%9D%A2%E6%AD%8C%E8%AF%8D%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%96%B0/</guid><description>&lt;h1 id="网易云的音乐封面歌词获取更新">网易云的音乐封面歌词获取（更新）&lt;/h1>
+&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>之前的两个动作不生效了，重新想办法。&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E7%BD%91%E6%98%93%E4%BA%91%E7%9A%84%E9%9F%B3%E4%B9%90%E5%B0%81%E9%9D%A2%E6%AD%8C%E8%AF%8D%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%96%B0/Assets/Pasted-image-20231017161042.png"
+width="385"
+height="154"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="250"
+data-flex-basis="600px"
+>&lt;/p>
+&lt;h2 id="封面">封面&lt;/h2>
+&lt;p>改成直接读取 &lt;meta> 元素了：&lt;/p>
+&lt;p>用音乐的原链接打开 HTML，然后提取 XPATH：&lt;br>
+&lt;code>/html/head/meta[@property=&amp;quot;og:image&amp;quot;]&lt;/code>&lt;/p>
+&lt;p>顺便，在浏览器其实可以 F12 然后右键，复制 XPATH：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E7%BD%91%E6%98%93%E4%BA%91%E7%9A%84%E9%9F%B3%E4%B9%90%E5%B0%81%E9%9D%A2%E6%AD%8C%E8%AF%8D%E8%8E%B7%E5%8F%96%E6%9B%B4%E6%96%B0/Assets/Pasted-image-20231017161437.png"
+width="390"
+height="490"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="79"
+data-flex-basis="191px"
+>&lt;/p>
+&lt;h2 id="歌词">歌词&lt;/h2>
+&lt;p>暂时没找到怎么办……&lt;br>
+直接用了一个第三方的 API 服务：&lt;br>
+&lt;a class="link" href="https://neteasecloudmusicapi.vercel.app/#/" target="_blank" rel="noopener"
+>网易云音乐 NodeJS 版 API&lt;/a>&lt;/p>
+&lt;p>虽然 NodeJs 啥的好像很麻烦，但是这个部署好了的 Vercel 站点是直接可以用的；&lt;br>
+比如查歌词就是：&lt;br>
+&lt;code>api.music.areschang.top/lyric?id=1501530173&lt;/code>&lt;/p>
+&lt;p>更多内容见文档：&lt;br>
+&lt;a class="link" href="https://neteasecloudmusicapi.vercel.app/#/?id=neteasecloudmusicapi" target="_blank" rel="noopener"
+>网易云音乐 NodeJS 版 API 文档&lt;/a>&lt;/p>
+&lt;p>回头可以再研究一下，反正是开源的。&lt;br>
+Github 库也 Fork 过来了。&lt;/p>
+&lt;h2 id="easyspider">EasySpider&lt;/h2>
+&lt;p>这个简单试了一下，有点麻烦，没搞明白……下次再说！&lt;br>
+&lt;a class="link" href="https://www.easyspider.net/download.html" target="_blank" rel="noopener"
+>易采集EasySpider下载地址&lt;/a>&lt;/p></description></item><item><title>QQ NT 版的一些文件结构探索</title><link>https://moyf.github.io/hugo-stack-blog/p/qq-nt-%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%8E%A2%E7%B4%A2/</link><pubDate>Sun, 08 Oct 2023 16:19:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/qq-nt-%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%8E%A2%E7%B4%A2/</guid><description>&lt;h1 id="qq-nt-版的一些文件结构探索">QQ NT 版的一些文件结构探索&lt;/h1>
+&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>想解决自己电脑端看不到商城表情的问题。&lt;/p>
+&lt;p>结果顺带发现了几个有点意思的路径。&lt;/p>
+&lt;h2 id="默认表情">默认表情&lt;/h2>
+&lt;p>&lt;code>..\nt_qq\global\nt_data\Emoji\emoji-resource\sysface_res\apng&lt;/code>&lt;/p>
+&lt;p>有趣的是其实好几种格式这里都有——甚至还有 apng！&lt;/p>
+&lt;p>这里还有个叫 &lt;code>QLotte&lt;/code> 的文件，感觉是和那个动态库 &lt;code>Lottie&lt;/code> 有关？&lt;/p>
+&lt;h2 id="关联推荐表情">关联推荐表情&lt;/h2>
+&lt;p>&lt;code>..\[QQ号]\nt_qq\nt_data\Emoji\emoji-related\emoji\&lt;/code>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/qq-nt-%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%8E%A2%E7%B4%A2/Assets/Pasted-image-20231009002943.png"
+width="730"
+height="335"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="217"
+data-flex-basis="522px"
+>&lt;br>
+那些打字出现的关联表情都会在这儿，可以看到好多类似含义的缓存图片。&lt;/p>
+&lt;p>这些图片默认也是没有后缀名的，但是没有关系，可以直接用 QK 动作一键添加。&lt;/p>
+&lt;p>可惜不知道和文本的关系存在哪里。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>words.json&lt;/code> 里存着一些文字，应该是能触发出关联推荐的关键字吧。&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="应用">应用&lt;/h4>
+&lt;p>比如刚输入完文字然后闪过一个想要的表情，没能选中。&lt;br>
+以前我都是再反复翻好多页尝试找出来的，现在可以直接在这个文件夹按修改时间查找，一下子就找到了。&lt;/p>
+&lt;h2 id="自定义表情漫游表情">自定义表情（漫游表情）&lt;/h2>
+&lt;p>&lt;code>..\[QQ号]\nt_qq\nt_data\Emoji\personal_emoji\Ori&lt;/code>&lt;br>
+这里则是——自定义表情！&lt;/p>
+&lt;p>以前可以导出 &lt;code>eif&lt;/code> 的，现在新版不支持了，但是反而可以直接看到图片文件。&lt;br>
+所以直接备份这个文件夹就可以啦。&lt;/p>
+&lt;p>顺便一提，会看到一些不知道怎么混进来的图片 🤔&lt;br>
+（可能是其他人的自定义表情？）&lt;/p>
+&lt;h2 id="表情商店">表情商店&lt;/h2>
+&lt;p>&lt;code>..\[QQ号]\nt_qq\nt_data\Emoji\marketface&lt;/code>&lt;br>
+这里能看到&lt;em>出现在聊天框过的&lt;/em>商城表情包。&lt;br>
+不管是别人发的（哪怕自己并不拥有）的表情还是自己发的表情，都在里面。&lt;/p>
+&lt;p>会按照表情包合集区分文件夹。&lt;/p>
+&lt;p>&lt;em>💡 回头批量提取出来？&lt;/em>&lt;/p>
+&lt;h3 id="表情商店图片">表情商店图片&lt;/h3>
+&lt;p>&lt;code>..\[QQ号]\nt_qq\nt_data\Emoji\emoji-recv&lt;/code>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/qq-nt-%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%8E%A2%E7%B4%A2/Assets/Pasted-image-20231009003811.png"
+width="730"
+height="459"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="159"
+data-flex-basis="381px"
+>&lt;br>
+这里就是接收的表情包啦（应该也包括自己发出去的）。&lt;br>
+会按照月份分开文件夹保存。&lt;/p>
+&lt;p>&lt;em>❗ 感觉适合用来作为 Quicker 表情包检索动作的素材来源！&lt;/em>&lt;br>
+&lt;em>不过大概需要先去重……&lt;/em>&lt;/p>
+&lt;h2 id="聊天图片">聊天图片&lt;/h2>
+&lt;p>&lt;code>..\[QQ号]\nt_qq\nt_data\Pic\2023-10\Ori&lt;/code>&lt;br>
+和上面的&lt;strong>表情包 Emote&lt;/strong>区分开来的其他图片。&lt;br>
+（也不知道是靠什么区分的……）&lt;/p>
+&lt;h4 id="其他媒体文件">其他媒体文件&lt;/h4>
+&lt;p>还有 &lt;code>Video&lt;/code> 啥的，同理，这里不再赘述……&lt;/p>
+&lt;p>不过有个 &lt;code>ptt&lt;/code> 不知道是啥，里面是 &lt;code>amr&lt;/code> 格式的文件。&lt;/p>
+&lt;h2 id="企业微信的表情包">企业微信的表情包&lt;/h2>
+&lt;p>顺便，之前发现的：&lt;br>
+&lt;code>E:\Documents\WXWork\1688853793444655\Emotion\2019-12&lt;/code>&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/qq-nt-%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%8E%A2%E7%B4%A2/Assets/Pasted-image-20231008162101.png"
+width="800"
+height="560"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="342px"
+>&lt;/p>
+&lt;p>可以通过双击图片快速打开：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/qq-nt-%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E6%8E%A2%E7%B4%A2/Assets/Pasted-image-20231008162132.png"
+width="640"
+height="480"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p></description></item><item><title>子弹笔记的一些简单尝试</title><link>https://moyf.github.io/hugo-stack-blog/p/%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/</link><pubDate>Sun, 08 Oct 2023 16:16:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/</guid><description>&lt;h1 id="子弹笔记的一些简单尝试">子弹笔记的一些简单尝试&lt;/h1>
+&lt;h2 id="起因">起因&lt;/h2>
+&lt;p>在用「事线」作记录，&lt;br>
+然后想到有没有什么「基于纯文本」的格式化方法。&lt;/p>
+&lt;p>首先当然是 Markdown 了，但是……&lt;br>
+如果是列表呢？&lt;br>
+「子弹笔记」&lt;/p>
+&lt;h2 id="柴老师讲解">柴老师讲解&lt;/h2>
+&lt;p>以下是子弹笔记的要点以及几种常见的符号：&lt;/p>
+&lt;p>要点：&lt;/p>
+&lt;ol>
+&lt;li>子弹笔记是一种组织和记录信息的方法，旨在提高学习和记忆效率。&lt;/li>
+&lt;li>它采用简洁明了的结构，将信息分为主题、子主题和细节，并使用符号进行标记和分类。&lt;/li>
+&lt;li>子弹笔记的核心原则是快速记录和简化信息，以便后续回顾和复习。&lt;/li>
+&lt;/ol>
+&lt;p>符号：&lt;/p>
+&lt;ol>
+&lt;li>•（圆点）：用于表示主要主题或标题。&lt;/li>
+&lt;li>-（短横线）：用于表示子主题或次要标题。&lt;/li>
+&lt;li>▸（箭头）：用于表示细节或子细节。&lt;/li>
+&lt;li>○（空心圆）：用于标记待办事项或任务。&lt;/li>
+&lt;li>×（叉号）：用于表示&lt;strong>已完成&lt;/strong>的任务。&lt;/li>
+&lt;li>!（感叹号）：用于强调重要信息或提醒。&lt;/li>
+&lt;li>*（星号）：用于标记特别重要的信息或注释。&lt;/li>
+&lt;/ol>
+&lt;p>这些是子弹笔记的基本要点和常见符号，你可以根据自己的需求和喜好进行适当的调整和扩展。希望对你有所帮助！&lt;/p>
+&lt;h2 id="对我而言">对我而言&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">* 这个是默认的符号
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">## 这个是标题（对，没必要都一个层级）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; 细节？
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">! 重要
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>…… 那感觉可以这样：&lt;/p>
+&lt;p>&lt;style type="text/css">.notice{--root-color:#444;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#c33;--warning-content:#fee;--info-title:#fb7;--info-content:#fec;--note-title:#6be;--note-content:#e7f2fa;--tip-title:#5a5;--tip-content:#efe}@media (prefers-color-scheme:dark){.notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}}body.dark .notice{--root-color:#ddd;--root-background:#eff;--title-color:#fff;--title-background:#7bd;--warning-title:#800;--warning-content:#400;--info-title:#a50;--info-content:#420;--note-title:#069;--note-content:#023;--tip-title:#363;--tip-content:#121}.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:var(--root-color);background:var(--root-background)}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:var(--title-color);background:var(--title-background)}.notice.warning .notice-title{background:var(--warning-title)}.notice.warning{background:var(--warning-content)}.notice.info .notice-title{background:var(--info-title)}.notice.info{background:var(--info-content)}.notice.note .notice-title{background:var(--note-title)}.notice.note{background:var(--note-content)}.notice.tip .notice-title{background:var(--tip-title)}.notice.tip{background:var(--tip-content)}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:.125em;position:relative}&lt;/style>
+&lt;div>&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">&lt;symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>&lt;/symbol>&lt;symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>&lt;/symbol>&lt;symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>&lt;/symbol>&lt;symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">&lt;path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>&lt;/symbol>&lt;/svg>&lt;/div>&lt;div class="notice note" >
+&lt;p class="first notice-title">&lt;span class="icon-notice baseline">&lt;svg>&lt;use href="#note-notice">&lt;/use>&lt;/svg>&lt;/span>注释&lt;/p>&lt;h2 id="主题">主题&lt;/h2>
+&lt;ul>
+&lt;li>一条&lt;/li>
+&lt;li>两条&lt;/li>
+&lt;li>取消的事儿 （手写就划掉）&lt;/li>
+&lt;li>完成的事儿 ✅&lt;/li>
+&lt;li>重要的事儿 ❗
+&lt;ul>
+&lt;li>子内容就用缩进来做&lt;/li>
+&lt;li>手写也方便&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>&lt;/div>
+&lt;br>
+——结合 MD 语法的“M式子弹笔记”，挺好？&lt;/p>
+&lt;h2 id="231011_后续便笺上的应用">231011_后续：便笺上的应用&lt;/h2>
+&lt;blockquote>
+&lt;p>嗨呀，忘了是写在这儿还是写在「事线」上的了……&lt;br>
+*笔记应用多起来以后就是会有&lt;strong>这种麻烦&lt;/strong> *！&lt;/p>
+&lt;/blockquote>
+&lt;p>刚才试了一下，发现其实这种简化的子弹写法对于 Windows 自带便笺也是适用的：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%AD%90%E5%BC%B9%E7%AC%94%E8%AE%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/Assets/Pasted-image-20231011160246.png"
+width="294"
+height="225"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="130"
+data-flex-basis="313px"
+>&lt;/p>
+&lt;p>只不过因为不支持层级，所以可能还是要用那个 &lt;code>-&lt;/code> 等于子级的写法。&lt;br>
+然后「强调」就用加粗；&lt;br>
+完成或者取消都可以用「划掉」。&lt;/p>
+&lt;p>这样就可以啦！&lt;/p></description></item></channel></rss>

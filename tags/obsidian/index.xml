@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Obsidian on Moy's Blog</title><link>https://moyf.github.io/hugo-stack-blog/tags/obsidian/</link><description>Recent content in Obsidian on Moy's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 19 Jan 2024 00:56:00 +0000</lastBuildDate><atom:link href="https://moyf.github.io/hugo-stack-blog/tags/obsidian/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在 iOS 上快速创建带有模板的md文档</title><link>https://moyf.github.io/hugo-stack-blog/p/%E5%A6%82%E4%BD%95%E5%9C%A8-ios-%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E6%A8%A1%E6%9D%BF%E7%9A%84md%E6%96%87%E6%A1%A3/</link><pubDate>Fri, 19 Jan 2024 00:56:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/%E5%A6%82%E4%BD%95%E5%9C%A8-ios-%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E6%A8%A1%E6%9D%BF%E7%9A%84md%E6%96%87%E6%A1%A3/</guid><description>&lt;h1 id="ios快捷创建模板化md文档的方式">iOS快捷创建模板化md文档的方式&lt;/h1>
+&lt;h2 id="前情">前情&lt;/h2>
+&lt;p>如 &lt;span title="某个私人页面">████&lt;/span> 所说，终于开始使用 Git 进行 Obsidian 的同步了！&lt;/p>
+&lt;p>与此同时，使用 &lt;strong>Working Copy&lt;/strong> 进行 Github 的仓库同步，然后用 &lt;strong>MWeb&lt;/strong> 进行文档的编辑和查看。&lt;br>
+关于 App 的选择，详见：&lt;span title="某个私人页面">████&lt;/span>&lt;/p>
+&lt;p>为什么不用 Obsidian 原生 iOS 应用呢？&lt;br>
+——因为 Ob 的原生应用不支持访问外部文件夹，反而没法和 WorkingCopy 同步下来的文件进行交互。&lt;br>
+（而我不舍得订阅 Obsidian 官方 Sync 服务x）&lt;/p>
+&lt;h2 id="我的需求">我的需求&lt;/h2>
+&lt;p>总之，既然千辛万苦解决了 iOS 端的同步问题，那当然是想在手机上能够方便地查看和添加文件的。&lt;/p>
+&lt;p>查看目前没啥问题，用 MWeb 就能搞定。&lt;br>
+添加的话……&lt;br>
+虽说也可以用“新建文件”的方式，但是那样和我自己的&lt;strong>工作流&lt;/strong>非常不同意。&lt;/p>
+&lt;p>举个例子，我的&lt;strong>Zettelkasten&lt;/strong>卡片盒文件夹，专门用来收集一些零散的信息。&lt;/p>
+&lt;p>它需要创建在 &lt;code>Obsinote/Zettelkasten/年份-月份/日期前缀_笔记名称.md&lt;/code> 的路径下。&lt;br>
+举个例子，今天是2024年1月9日，我想要添加一个叫做“iOS快捷创建模板化md文档的方式”的笔记，那它应该存在这个路径下：&lt;br>
+&lt;code>Obsinote/Zettelkasten/2024-01/240109_iOS快捷创建模板化md文档的方式.md&lt;/code>&lt;/p>
+&lt;p>整体结构如图：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%A6%82%E4%BD%95%E5%9C%A8-ios-%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E6%A8%A1%E6%9D%BF%E7%9A%84md%E6%96%87%E6%A1%A3/Assets/240119_iOS%E5%BF%AB%E6%8D%B7%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E5%8C%96md%E6%96%87%E6%A1%A3%E7%9A%84%E6%96%B9%E5%BC%8F-img-1.png"
+width="568"
+height="546"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="249px"
+>&lt;/p>
+&lt;p>与此同时，文件内应该自动添加这样的 frontmatter 属性：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>{&lt;span class="l">笔记标题} &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">date&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>{&lt;span class="l">创建日期} &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">lastmod&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">tags&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">aliases&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这一系列模板化的、和当前日期绑定的文本内容，靠自己手填显然是不现实的……&lt;/p>
+&lt;p>所以我们需要——自动化！&lt;/p>
+&lt;h2 id="快捷指令登场">快捷指令，登场&lt;/h2>
+&lt;p>在现如今的 iOS 上玩自动化，第一时间想到的当然是官方的 &lt;strong>快捷指令（Shortcuts）&lt;/strong>。&lt;br>
+&lt;em>正如在 PC 端第一时间想到是 Quicker！&lt;/em>&lt;/p>
+&lt;h3 id="保存文本文件">保存文本文件&lt;/h3>
+&lt;p>首先尝试了一下“创建文件”，是可以的。&lt;/p>
+&lt;p>具体方法就是：&lt;/p>
+&lt;ul>
+&lt;li>添加一个「文本」节点&lt;/li>
+&lt;li>用「保存文件」节点，将文本内容储存到指定位置&lt;/li>
+&lt;/ul>
+&lt;p>看上去一切顺利，不过有一个问题：&lt;br>
+不管我怎么指定文件的后缀名，它都会存成 &lt;code>.txt&lt;/code> 文件，而不是我希望的 &lt;code>.md&lt;/code> 文件。&lt;/p>
+&lt;p>经过一番调查，发现应该用「更改名称」节点，变成这样的流程：&lt;/p>
+&lt;ul>
+&lt;li>添加「文本」节点&lt;/li>
+&lt;li>用「更改名称」节点将文本的名称修改成「xxx.md」&lt;/li>
+&lt;li>用「保存文件」去储存「更改名称后的项目」&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>只有用这种方法才能存下 &lt;em>非txt格式&lt;/em> 的文本文件！&lt;/strong>&lt;/p>
+&lt;h3 id="格式化内容">格式化内容&lt;/h3>
+&lt;p>第一部分：日期&lt;br>
+这个倒是比较容易，变量填空里自带一个 &lt;strong>当前日期&lt;/strong> 的变量。&lt;br>
+添加之后点击一下，格式修改为 &lt;strong>自定义&lt;/strong>，然后按照自己希望的日期格式填写就好了。&lt;/p>
+&lt;p>比如我的文件夹路径是：&lt;code>Zettelkasten/yyyy-MM&lt;/code>&lt;br>
+文件名前缀则是：&lt;code>yyMMdd_&lt;/code>&lt;/p>
+&lt;p>第二部分 frontmatter 元数据也很简单，直接填写在「文本」节点内部就好。&lt;br>
+&lt;em>记得在 &lt;code>属性:&lt;/code> 后面需要有一个空格！&lt;/em>&lt;/p>
+&lt;h3 id="用户输入">用户输入&lt;/h3>
+&lt;p>最后，添加两个用户输入，分别获得笔记的名称和内容，拼合在一起就大功告成啦！&lt;/p>
+&lt;p>文件储存完后还可以加一个 WorkingCopy 的节点，直接在软件内显示这个新创建的笔记，方便快速编辑。&lt;br>
+（可惜 MWeb 好像不支持快捷指令……）&lt;/p>
+&lt;p>最后的结果如下：&lt;br>
+第一部分：获取用户输入，并填写基本的模板&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%A6%82%E4%BD%95%E5%9C%A8-ios-%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E6%A8%A1%E6%9D%BF%E7%9A%84md%E6%96%87%E6%A1%A3/Assets/17055971134422.png"
+width="1179"
+height="2556"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>第二部分：保存到指定位置并打开&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/%E5%A6%82%E4%BD%95%E5%9C%A8-ios-%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E5%B8%A6%E6%9C%89%E6%A8%A1%E6%9D%BF%E7%9A%84md%E6%96%87%E6%A1%A3/Assets/17055971135975.png"
+width="931"
+height="2019"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="46"
+data-flex-basis="110px"
+>&lt;/p>
+&lt;p>你也可以直接下载我分享的快捷指令：&lt;/p>
+&lt;p>——以上！&lt;/p></description></item></channel></rss>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程 on Moy's Blog</title><link>https://moyf.github.io/hugo-stack-blog/categories/%E7%BC%96%E7%A8%8B/</link><description>Recent content in 编程 on Moy's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 20 Dec 2023 18:28:00 +0000</lastBuildDate><atom:link href="https://moyf.github.io/hugo-stack-blog/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>Rider 的两则小知识</title><link>https://moyf.github.io/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/</link><pubDate>Wed, 20 Dec 2023 18:28:00 +0000</pubDate><guid>https://moyf.github.io/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/</guid><description>&lt;h1 id="rider-的两则小知识">Rider 的两则小知识&lt;/h1>
+&lt;h2 id="symbol-search-符号查询">Symbol Search 符号查询&lt;/h2>
+&lt;p>使用默认的搜索框，哪怕设置了 Filter，&lt;br>
+还是会给出一大堆的无关选项。&lt;/p>
+&lt;p>&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/20231218_161622_233_copy.png"
+width="898"
+height="196"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="458"
+data-flex-basis="1099px"
+>&lt;/p>
+&lt;p>这个时候就应该用 &lt;code>Alt+\&lt;/code> 来查找函数啥的：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218161730.png"
+width="695"
+height="111"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="626"
+data-flex-basis="1502px"
+>&lt;/p>
+&lt;p>这个是限定范围的，&lt;br>
+好用很多！&lt;/p>
+&lt;h2 id="fast-surround-快速包裹">Fast Surround 快速包裹&lt;/h2>
+&lt;p>有时候会经常需要把比如 &lt;code>UAkSwitchValue&lt;/code> 转成 &lt;code>TStrongObjectPtr&amp;lt;UAkSwitchValue&amp;gt;&lt;/code>&lt;/p>
+&lt;p>这时候可以用 &lt;a class="link" href="https://www.jetbrains.com/help/rider/Templates__Applying_Templates__Creating_Source_Code_Using_Live_Templates.html" target="_blank" rel="noopener"
+>Live Template&lt;/a> 功能：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218161946.png"
+width="984"
+height="701"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="336px"
+>&lt;/p>
+&lt;p>&lt;code>$SELECTION$&lt;/code> 代表选中的文本，&lt;br>
+&lt;code>$END$&lt;/code> 代表插入之后的结尾放哪儿。&lt;/p>
+&lt;p>注意右边有个 &lt;code>Mnemonic&lt;/code> 速记符，是在这个时候用的：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218201007.png"
+width="302"
+height="199"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="364px"
+>&lt;br>
+唤出的方法：&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218201038.png"
+width="898"
+height="247"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="363"
+data-flex-basis="872px"
+>&lt;br>
+可以用快捷键 &lt;code>Ctrl+E, U&lt;/code> 来快速唤出。&lt;/p>
+&lt;hr>
+&lt;p>在右键的 Contextural Menu 可以显示，但这样太麻烦了。&lt;br>
+&lt;img src="https://moyf.github.io/hugo-stack-blog/hugo-stack-blog/p/rider-%E7%9A%84%E4%B8%A4%E5%88%99%E5%B0%8F%E7%9F%A5%E8%AF%86/Assets/Pasted-image-20231218162128.png"
+width="537"
+height="290"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+>&lt;/p></description></item></channel></rss>
