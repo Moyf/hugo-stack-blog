@@ -1,9 +1,10 @@
 ---  
 title: QQ NT 版的一些文件结构探索  
 date: 2023-10-08T16:19:00  
-lastmod: 2024-02-27T00:35:00  
+lastmod: 2024-02-27T10:37:00  
 tags:  
   - TIL  
+  - 表情包  
 aliases:   
 description: 新版 NT QQ 的表情包路径，以及一些有趣的文件夹探索。  
 categories:  
