@@ -14,6 +14,7 @@
         --title-background-color: #6be;
         --content-color: #444;
         --content-background-color: #e7f2fa;
+        
     }
 
     .notice.info {
@@ -31,8 +32,63 @@
         --content-background-color: #fee;
     }
 
+    
+    /* Light theme Override */
+    html[data-scheme="light"] {
+        .notice {
+            --title-color: #fff;
+            --title-background-color: #6be;
+            --content-color: #444;
+            --content-background-color: #e7f2fa !important;
+            
+        }
+
+        .notice.info {
+            --title-background-color: #fb7;
+            --content-background-color: #fec;
+        }
+
+        .notice.tip {
+            --title-background-color: #5a5;
+            --content-background-color: #efe;
+        }
+
+        .notice.warning {
+            --title-background-color: #c33;
+            --content-background-color: #fee;
+        }
+    }
+
+    
+
     /* Dark theme */
-    @media (prefers-color-scheme:dark) {
+    /* @media (prefers-color-scheme:dark) {
+        .notice {
+            --title-color: #fff;
+            --title-background-color: #069;
+            --content-color: #ddd;
+            --content-background-color: #023;
+        }
+
+        .notice.info {
+            --title-background-color: #a50;
+            --content-background-color: #420;
+        }
+
+        .notice.tip {
+            --title-background-color: #363;
+            --content-background-color: #121;
+        }
+
+        .notice.warning {
+            --title-background-color: #800;
+            --content-background-color: #400;
+        }
+    } */
+
+
+    
+    html[data-scheme="dark"] {
         .notice {
             --title-color: #fff;
             --title-background-color: #069;
@@ -55,6 +111,7 @@
             --content-background-color: #400;
         }
     }
+
 
     body.dark .notice {
         --title-color: #fff;

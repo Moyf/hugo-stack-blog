@@ -7,6 +7,7 @@ params:
   featuredImageField: image
   rssFullContent: true
   favicon:
+    icon: /img/favicon.png
 
   footer:
     since: 2020
